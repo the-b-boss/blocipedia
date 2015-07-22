@@ -5,7 +5,13 @@
       <center>
         <h4>Upgrade to Premium!</h4>
         <p>Ready to enjoy the benefits of private wikis?</p>
-        <script class='stripe-button' src="https://checkout.stripe.com/checkout.js" data-key="<%= @stripe_btn_data[:key] %>" data-amount=<%= @stripe_btn_data[:amount] %> data-description="<%= @stripe_btn_data[:description] %>" ></script>
+        <script 
+          class='stripe-button' 
+          src="https://checkout.stripe.com/checkout.js" 
+          data-key="<%= @stripe_btn_data[:key] %>" 
+          data-amount=<%= @stripe_btn_data[:amount] %> 
+          data-description="<%= @stripe_btn_data[:description] %>" >
+        </script>
       </center>
    </div>
    <div class="col-md-4"></div>

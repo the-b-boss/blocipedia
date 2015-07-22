@@ -2,6 +2,7 @@ class ChargesController < ApplicationController
 
 def create
  
+  # if current_user.role != 'premium'
    customer = Stripe::Customer.create(
      email: current_user.email,
      card: params[:stripeToken]
@@ -34,6 +35,5 @@ def new
      :amount => 1500
    }
  end
-
 
 end
