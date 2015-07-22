@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   
   resources :wikis
 
+  resources :charges, only: [:new, :create]
+
+  get 'my_wikis' => 'wikis#my_wikis'
   get 'about' => 'welcome#about'
   root to: 'welcome#index'
 end
